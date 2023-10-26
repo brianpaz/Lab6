@@ -19,3 +19,20 @@ def encode_password(password):
         else:
             encoded += str(int(integer) + 3)
     return encoded
+
+
+def main():
+    print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit")
+    choice = int(input("\nPlease enter an option: "))
+    while choice != 3:
+        if choice == 1:
+            password = input("Please enter your password to encode: ")
+            encoded = encode_password(password)
+            print("Your password has been encoded and stored!")
+        elif choice == 2:
+            print(f"The encoded password is {encoded}, and the original password is {password}.")
+        print("\nMenu\n-------------\n1. Encode\n2. Decode\n3. Quit")
+        choice = int(input("\nPlease enter an option: "))
+
+if __name__ == "__main__":
+    main()
