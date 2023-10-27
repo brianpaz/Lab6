@@ -21,7 +21,7 @@ def encode_password(password):
             encoded += str(int(integer) + 3)
     return encoded
 
-# bari walters
+# by bari walters
 def decode(encoded):
     # creates a string to add the reduced digits to
     empty_string = ""
