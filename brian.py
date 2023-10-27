@@ -21,6 +21,23 @@ def encode_password(password):
             encoded += str(int(integer) + 3)
     return encoded
 
+# bari walters
+def decode(encoded):
+    # creates a string to add the reduced digits to
+    empty_string = ""
+    # goes through each digit in encoded password
+    for digit in encoded:
+        # subtracts 3 from each digit
+        empty_string += str(int(digit) - 3)
+        # accounts for numbers that will be negative when subtracting 3
+        if "0" <= digit <= "2":
+            # removes negative number from string
+            empty_string = empty_string[:-2]
+            # adds the negative number plus 7 (to make it positive) to the string
+            empty_string += str(int(digit) + 7)
+
+    return empty_string
+
 
 def main():
 
